@@ -1,0 +1,24 @@
+1. Vaja - uvod v knjižnico caret in osnove napovednega modeliranja
+Na prvih vajah bomo spoznali R knjižnico caret in osnove dela z njo. Spoznali se bomo z najpomembnejšo metodo train in kako jo lahko pokličemo. Na enostavnem podatkovnem primeru bomo izvedli osnovno analizo podatkov.
+Ko se nam pri uporabi različnih ukazov zatakne, si lahko pomagamo z help(ukaz), ali pa bližnjico F1 v RStudio.
+
+Prvi del
+
+    Naloži knjižnico caret (z ukazom library(caret)). Če še ni instalirana, to popravimo z  install.packages("caret").
+    Naloži popularen podatkovni vir iris (z ukazom data(iris)). Povzami osnovne lastnosti podatkov: število vrstic, število stolpcev, vrste spremenjivk, njihova povprečja ter kvartili.
+    Razdeli podatkovje na učno in testno množico (train test in test set) v razmerju 4:1. Pozor, ni dobra vsaka delitev.
+    Namig: pomagamo si lahko z metodo createDataPartition.
+    Poženi metodo najbližjih sosedov na učni množici ter poglej rezultat algoritma. Katero vrednost parametra k je izbral algoritem?
+    Namig: pomagamo si lahko z metodo train.
+    Poženi metodo najbližjih sosedov na učni množici z vrednostmi parametra k med 1 in 30. Nariši graf natančnosti v odvisnosti od števila sosedov k.
+    Namig: pomagamo si lahko s argumentom tuneGrid v metodi train, za risanje grafov pa s funkcijo plot.
+    Na testni množici preveri natančnost najboljšega modela. Izračunaj napako na učni množici in jo primerjaj z napako, ki jo izračuna model.
+    Namig: pomagamo si lahko s funkcijo predict.
+
+Drugi del
+
+    Naloži podatke v datoteki podatki.csv. Če se bo R pritožil, da datoteka ne obstaja, pokliči getwd().
+    Podatke analiziraj tako kot v prvem delu. Pričakuj, da postopek ne bo povsem enostaven, saj se v podatkih skriva nekaj napak.
+    Namig: pomagamo si lahko s funkcijama View in str.
+    Kako dobre so napovedi modela? Lahko natančnost kako izboljšamo?
+    Namig: še enkrat poglejmo porazdelitve posameznih spremenjivk ter razmislimo, kako deluje metoda najbližjih sosedov.
